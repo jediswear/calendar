@@ -1,0 +1,7 @@
+/* настройки пресетов в json формате */
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "plugins": ["@babel/plugin-transform-runtime"]
+}

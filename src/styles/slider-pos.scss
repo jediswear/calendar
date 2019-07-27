@@ -1,0 +1,164 @@
+#frame {
+    width: 200px;
+    height: 200px;
+
+    position: relative;
+    left: 300px;
+    background-color: lightblue;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+#carousel {
+    position: relative;
+    display: flex;
+    width: 1000px;
+    height: 200px;
+    background-color: blue;
+    border: 1px solid green;
+    box-sizing: border-box;
+}
+
+.animate {
+    transition-duration: 1s;
+    transition-property: transform;
+
+    &.img {
+        position: relative;
+        float: left;
+        transform: translate(-200px)
+        /*left: 200px;*/
+    }
+}
+
+
+#controls {
+    position: relative;
+    left: 300px;
+    width: 200px;
+}
+
+#left {
+    float: left;
+    width: 33.3%;
+}
+
+#index {
+    display: inline-block;
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+
+#right {
+    float: right;
+    width: 33.3%;
+}
+
+.slider {
+    position: relative;
+    margin: 30px auto;
+    max-width: 100%;
+    background: black;
+    overflow: hidden;
+
+    &.mobile {
+        .move {
+            min-height: 250px;
+
+            .slide {
+                &.prev {
+                    width: 30%;
+                }
+
+                &.next {
+                    width: 30%;
+                }
+            }
+        }
+    }
+
+    .move {
+        position: relative;
+        display: flex;
+        min-height: 500px;
+        height: 0;
+
+
+        .slide {
+            position: absolute;
+            height: 100%;
+            transition: .6s;
+            left: 50%;
+            transform: translate(-50%);
+
+            &.slide-hide {
+                opacity: 0;
+                visibility: hidden;
+                transition: none;
+            }
+
+            &.prev {
+                width: 15%;
+            }
+
+            &.next {
+                width: 15%;
+            }
+
+            &.curr {
+                width: 40%;
+            }
+
+            img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                padding: 0 10px;
+                box-sizing: border-box;
+                transition: .3s;
+            }
+        }
+    }
+
+    .l-block {
+        color: white;
+        position: absolute;
+        top: 50%;
+        max-width: 30%;
+        max-height: 50%;
+        box-sizing: border-box;
+        padding: 20px 20px 20px 10px;
+    }
+
+    .r-block {
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 30%;
+        max-height: 50%;
+        box-sizing: border-box;
+        padding: 20px 20px 20px 10px;
+    }
+}
+
+.trans {
+    background: black;
+    width: 500px;
+    height: 200px;
+    position: relative;
+
+    img {
+        position: absolute;
+        height: 100px;
+
+        left: 10%;
+        width: 100px;
+    }
+}
+
